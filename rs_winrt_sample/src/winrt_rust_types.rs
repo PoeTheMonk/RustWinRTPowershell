@@ -103,10 +103,10 @@ impl bindings::IBasicTestDatabaseFactory_Impl for BasicTestDatabaseFactory_Impl 
     }
 }
 
+#[cfg(test)]
 mod test {
 
     use super::*;
-    use bindings;
 
     // I've had some difficulty with this test being successful in the past due to Runtime class not being found,
     // but hopefully just works now.
@@ -143,7 +143,7 @@ mod test {
         assert_eq!(basic.len(), 16);
         return Ok(());
     }
-    
+
     #[test]
     fn basic_test_database_default_constructor_impl_test() -> Result<()> {
         let basic_test_database = bindings::BasicTestDatabase::new()?;

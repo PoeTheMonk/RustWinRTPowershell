@@ -17,9 +17,10 @@ impl RustBasicTestImpl for RustBasicTest {
     }
 }
 
+#[cfg(test)]
 mod test {
     use super::*;
-    use std::{sync::Mutex};
+    use std::sync::Mutex;
 
     #[test]
     fn rust_basic_test_property_test_impl_test() {
