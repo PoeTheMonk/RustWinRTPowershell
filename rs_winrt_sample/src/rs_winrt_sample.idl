@@ -1,0 +1,18 @@
+namespace rs_winrt_sample
+{
+    // TODO: add GUIDs to these classes to make API stable
+    runtimeclass BasicTest
+    {
+        BasicTest(String val);
+        String Run(String value);
+        String PropertyTest;
+    }
+
+    runtimeclass BasicTestDatabase
+    {
+        BasicTestDatabase();
+        // TODO: for some reason I can't figure out how to get a default constructor to be the only constructor
+        BasicTestDatabase(Boolean val);
+        BasicTest[] GetCollection(UInt32 size);
+    }
+}
